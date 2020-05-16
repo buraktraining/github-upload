@@ -1,0 +1,144 @@
+/* Remove padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font: 14px "Roboto", sans-serif;
+    color: #000000;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Lora", serif;
+    font-weight: 400;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.7rem;
+    font-size: 1rem;
+    background: #ededed;
+}
+
+form input {
+    min-width: 30%;
+    transition: all 0.3s ease;
+}
+
+form input:focus::placeholder {
+    font-size: 14px;
+    content: " ";
+}
+
+form button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: lightgrey;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    outline: 0px;
+}
+.select {
+    margin: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.7em;
+    background-color: #ededed;
+    transition: all 0.3s ease;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.7em;
+    pointer-events: none;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 60%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ededed73;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+.todo li {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.trash-btn,
+.complete-btn {
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(119, 119, 119);
+    padding-right: 1rem;
+    height: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+.trash-btn {
+    color: tomato;
+}
+.trash-btn:hover {
+    color: rgb(255, 0, 0);
+}
+.complete-btn:hover {
+    color: rgb(34, 170, 0);
+}
+
+.fa-minus-square,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.miss {
+    opacity: 0;
+}
